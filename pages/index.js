@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css';
 import ContactForm from '../components/ContactForm.js';
 import Navigation from '../components/Navigation.js';
 import Header from '../components/Header.js';
-import { useRef, useState } from 'react';
+
 
 export default function Home() {
 
@@ -95,7 +95,7 @@ export default function Home() {
       </footer>
     </div>
     <Navigation />
-    {/* <script src="path/to/particles.min.js"></script> */}
+    <script src="node_modules/particlesjs/dist/particles.min.js"></script>
     </>
   )
 }

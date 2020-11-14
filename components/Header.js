@@ -1,26 +1,42 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from '../styles/Header.module.css';
 
 export default function Header() {
 
 	const nameRef = useRef();
 	const [bool, setBool] = useState(false);
-
+	const ALIAS = 'Mofiz.dev';
+	const NAME = 'Mohammad Hafiz Nazari';
 	const handleNameChange = () => {
-		
 		setBool(!bool);
-		if (!bool){
-			nameRef.current.innerHTML = 'Mofiz.dev';
-		}else{
-			nameRef.current.innerHTML = 'Mohammad Hafiz Nazari';
-		}
 	}
 
-	return(
+	//first render
+	useEffect(() => {
+		console.log('first render')
+		window.onload = () => {
+			Particles.init({
+				selector: '.background'
+			});
+		};
+		
+	}, [])
+
+	useEffect(() => {
+		if (!bool) {
+			nameRef.current.innerHTML = ALIAS;
+		} else {
+			nameRef.current.innerHTML = NAME;
+		}
+	}, [bool])
+
+	return (
 		<header className={styles.header}>
-			<h1 ref={nameRef} onClick={handleNameChange}>Mohammad Hafiz Nazari</h1>
-			<h4>Full Stack Javascript Developer</h4>
+			<div>
+				<h1 ref={nameRef} onClick={handleNameChange}>{ALIAS}</h1>
+				<h4>Full Stack Javascript Developer</h4>
+			</div>
 			<canvas className="background"></canvas>
-	  </header>
+		</header>
 	)
 }

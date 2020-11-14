@@ -1,5 +1,6 @@
 
 .header {
+	position: relative;
 	padding-top: 1rem;
 	font-size: 1.3rem;
 	display: flex;
@@ -14,7 +15,8 @@
 	margin-top: 1rem;
 	margin-bottom: 0px;
 	text-align: center;
-	font-family: sans-serif;
+	font-family: 'Staatliches', cursive;
+	font-size: 120px;
 	cursor: pointer;
 	text-rendering: optimizeSpeed;
 	transition: visible 0.8s ease-in-out;
