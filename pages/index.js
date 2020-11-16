@@ -3,7 +3,8 @@ import styles from '../styles/Home.module.css';
 import ContactForm from '../components/ContactForm.js';
 import Navigation from '../components/Navigation.js';
 import Header from '../components/Header.js';
-
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
 
@@ -90,12 +91,18 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Github &rarr;
+          <FontAwesomeIcon icon={faLink}/> Github
+        </a>
+        <a
+          href="https://ca.linkedin.com/in/hafiz-nazari-1b324a10a"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FontAwesomeIcon icon={faLink}/> LinkedIn
         </a>
       </footer>
     </div>
     <Navigation />
-    <script src="node_modules/particlesjs/dist/particles.min.js"></script>
     </>
   )
 }

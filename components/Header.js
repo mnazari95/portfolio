@@ -11,17 +11,6 @@ export default function Header() {
 		setBool(!bool);
 	}
 
-	//first render
-	useEffect(() => {
-		console.log('first render')
-		window.onload = () => {
-			Particles.init({
-				selector: '.background'
-			});
-		};
-		
-	}, [])
-
 	useEffect(() => {
 		if (!bool) {
 			nameRef.current.innerHTML = ALIAS;
@@ -36,7 +25,6 @@ export default function Header() {
 				<h1 ref={nameRef} onClick={handleNameChange}>{ALIAS}</h1>
 				<h4>Full Stack Javascript Developer</h4>
 			</div>
-			<canvas className="background"></canvas>
 		</header>
 	)
 }

@@ -19,9 +19,11 @@ export default function Navigation() {
 
 	useEffect(() => {
 		if (toggleNav) {
+			toggleBtnRef.current.style.width = "0px";
 			toggleNavigationRef.current.style.width = "100px";
 		} else {
 			toggleNavigationRef.current.style.width = "0px";
+			toggleBtnRef.current.style.width = "30px";
 		}
 	}, [toggleNav]);
 
@@ -29,15 +31,14 @@ export default function Navigation() {
 		(<button
 			className={styles.toggleBtn}
 			onClick={handleToggleNav}
-			ref={toggleBtnRef}>{openNavIcon
-	}</button>)
-		: (null));
+			ref={toggleBtnRef}>{openNavIcon}</button>)
+		: (<button 
+			ref={toggleBtnRef}></button>));
 
 	const closeNav =  (toggleNav && toggleNav ? 
 		(<button
 			className={styles.closeNavBtn}
-			onClick={handleToggleNav}
-			ref={toggleBtnRef}>{closeNavIcon}</button>) 
+			onClick={handleToggleNav}>{closeNavIcon}</button>) 
 		: (<button>{closeNavIcon}</button>));
 
 	return (
@@ -54,4 +55,4 @@ export default function Navigation() {
 			</div>
 		</>
 	);
-}
+ } 
