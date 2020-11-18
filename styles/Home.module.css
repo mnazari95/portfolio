@@ -137,14 +137,19 @@
   margin: 0;
   line-height: 1.5;
 }
-.blogCard {
+.card h3 {
   display: flex;
-  border: solid 1px #eaeaea;
-  border-radius: 10px;
+  font-family: 'Bebas Neue', cursive;
   color: inherit;
+  flex-wrap: nowrap;
   text-align: center;
   max-height: 370px;
   width: 90%;
+  font-size: 1.6rem;
+}
+
+.card h4 {
+  font-family: 'Questrial', cursive;
 }
 
 .logo {
@@ -195,7 +200,6 @@
   
   .card h3 {
     margin: 0 0 1rem 0;
-    font-size: 1.5rem;
   }
   
   .logo {

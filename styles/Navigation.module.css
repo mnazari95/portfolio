@@ -51,10 +51,10 @@
 
 @media (min-width: 600px) {
     .navLayout {
-        bottom: 50%;
+        bottom: 40%;
     }
     .toggleBtn {
-        bottom: 54%;
+        bottom: 55%;
     }
     .sectionList li:hover,
     .sectionList li:active,

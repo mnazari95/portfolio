@@ -10,15 +10,20 @@
 
 }
 .header h1 {
-	padding-top: 0.5rem;
+	position: relative;
+	/* padding-top: 0.5rem;
 	margin-top: 0.5rem;
+	margin-bottom: 0px; */
+	padding-top: 0px;
+	margin-top: 0px;
 	margin-bottom: 0px;
 	text-align: center;
 	font-family: 'Staatliches', cursive;
 	font-size: 80px;
 	cursor: pointer;
-	text-rendering: optimizeSpeed;
-	transition: visible 0.8s ease-in-out;
+	transition: opacity 0.8s ease-in-out;
+	color: transparent;
+	text-shadow: 0 0 1px rgba(0, 0, 0, 1);
 }
 .header h4 {
 	padding: 0px;
@@ -32,18 +37,70 @@
 /* DESKTOP VIEW */
 @media (min-width: 600px) {
 
-.header {
-    font-size: 2rem;
-    align-content: center;
-  }
-  .header h1 {
-    padding-top: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+	.header {
+		align-content: center;
+	}
+	
+	.header h1 {
+		transition: all 1s ease-in-out;
   }
   .header h4 {
     padding: 0px;
     margin: 0px;
     margin-top: 0.5rem;
   }
+  .header h1::before {
+		content: '';
+		position: absolute;
+		background: white;
+		/* animation: swipe-left-right 2s ease-in-out; */
+		opacity: 1;
+		left: -20px;
+		right: -20px;
+		height: 100%;
+		z-index: -1;
+	}
+	.header h1::after {
+		content: '';
+		position: absolute;
+		display: block;
+		background: black;
+		/* animation: swipe-left-right 2s ease-in-out; */
+		opacity: 1;
+		top: 0;
+		left: 50%;
+		width: 100vw;
+		height: 100%;
+		transform: translateX(-50%);
+		z-index: -2;
+	}
+	
+}
+
+/*KEY FRAMES*/
+@keyframes swipe-left-right {
+	0% {
+		opacity: 1;
+		top: 0;
+		left: -200%;
+		width: 100%;
+		height: 100%;
+	}
+	100% {
+		opacity: 1;
+		top: 0;
+		left: 200%;
+		width: 100%;
+		height: 100%;
+	}
+}
+@keyframes nameHeader {
+	0% {
+		opacity: 0;
+		text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	}
+	100% {
+		opacity: 1;
+		text-shadow: 0 0 1px rgba(0, 0, 0, 1);
+	}
 }
