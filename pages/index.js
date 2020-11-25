@@ -4,7 +4,7 @@ import ContactForm from '../components/ContactForm.js';
 import Navigation from '../components/Navigation.js';
 import Header from '../components/Header.js';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
 
@@ -74,7 +74,12 @@ export default function Home() {
             About
           </h1>
           <div className={styles.centerContent}>
-          <p className={styles.paragraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi ipsum faucibus vitae aliquet nec ullamcorper sit. Mi tempus imperdiet nulla malesuada pellentesque elit. Dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in. Leo a diam sollicitudin tempor id eu nisl. Erat pellentesque adipiscing commodo elit. Ac turpis egestas integer eget aliquet nibh praesent tristique. Tortor vitae purus faucibus ornare suspendisse sed nisi. Consectetur lorem donec massa sapien. Netus et malesuada fames ac turpis egestas maecenas pharetra. Urna duis convallis convallis tellus id interdum velit laoreet. Leo in vitae turpis massa sed elementum tempus egestas. In vitae turpis massa sed elementum tempus. Feugiat pretium nibh ipsum consequat nisl vel pretium. Eu feugiat pretium nibh ipsum consequat nisl. Bibendum at varius vel pharetra vel turpis nunc eget.</p>
+          <p className={styles.paragraph}>I'm a full stack developer with 2 years of experience using React for frontend and NodeJS with MySQL for backend. 
+          Prior to web development I had knowledge of client side C#, and Java(android development). I enjoy learning new ways of implementing my ideas, wether 
+          its through new Technologies or tools. Currently I've been focusing more towards Javascript because of the amense amount of open source software available
+          today. I'm comfortable working with variety of projects, anything from static website to full on dynamic web application. The best way to reach me is either 
+          through the contact form below or through linkedIn which can be accessed in the footer of this website.
+          </p>
           </div>
         </section>
         <section className={styles.section} className={styles.b} id="contact">
@@ -91,14 +96,14 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faLink}/> Github
+          <FontAwesomeIcon icon={faExternalLinkAlt} size="2x"/> Github
         </a>
         <a
           href="https://ca.linkedin.com/in/hafiz-nazari-1b324a10a"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faLink}/> LinkedIn
+          <FontAwesomeIcon icon={faExternalLinkAlt}/> LinkedIn
         </a>
       </footer>
     </div>

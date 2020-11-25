@@ -67,7 +67,7 @@
 .title {
   margin: 2rem 1rem;
   line-height: 1.15;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: 'Bebas Neue', cursive;
 }
 
@@ -84,7 +84,8 @@
 .paragraph {
   text-indent: 2rem;
   text-align: start;
-  margin: 2rem 1rem;
+  font-size: 1.1rem;
+  margin: 2rem 2rem;
 }
 
 .code {
@@ -175,7 +176,9 @@
   }
   
   .paragraph {
-    margin: 2rem 6rem;
+    margin: 2rem 8rem;
+    text-align: center;
+    font-size: 1.2rem;
   }
 
   .card {
@@ -212,6 +215,6 @@
   .title {
     margin: 2rem 1rem;
     line-height: 1.15;
-    font-size: 4rem;
+    font-size: 5rem;
   }
 }

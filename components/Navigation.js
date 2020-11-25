@@ -23,7 +23,7 @@ export default function Navigation() {
 			toggleNavigationRef.current.style.width = "100px";
 		} else {
 			toggleNavigationRef.current.style.width = "0px";
-			toggleBtnRef.current.style.width = "30px";
+			toggleBtnRef.current.style.width = "1.7rem";
 		}
 	}, [toggleNav]);
 

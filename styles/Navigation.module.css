@@ -32,7 +32,7 @@
 	border-radius: 3px;
 	box-shadow: 1px 2px 7px 0px rgba(0, 0, 0, 0.25), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	transition: background 0.2s ease-in-out;
-	width: 30px;
+	width: 1.6rem;
 }
 
 .toggleBtn {
@@ -46,7 +46,7 @@
 	border-radius: 3px;
 	box-shadow: 1px 2px 7px 0px rgba(0, 0, 0, 0.25), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 	transition: background 0.2s ease-in-out, width 0.8s ease-in-out;
-	width: 30px;
+	width: 1.7rem;
 }
 
 @media (min-width: 600px) {
