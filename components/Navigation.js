@@ -10,8 +10,8 @@ export default function Navigation() {
 	const toggleBtnRef = useRef();
 
 
-	const openNavIcon = <FontAwesomeIcon icon={faArrowLeft} size="lg" />
-	const closeNavIcon = <FontAwesomeIcon icon={faTimes} size="lg" />
+	const openNavIcon = <FontAwesomeIcon className={styles.iconStyle} icon={faArrowLeft} size="lg" />
+	const closeNavIcon = <FontAwesomeIcon icon={faTimes} className={styles.iconStyle} size="lg" />
 	
 	const handleToggleNav = () => {
 		setToggleNav(!toggleNav);
@@ -23,7 +23,7 @@ export default function Navigation() {
 			toggleNavigationRef.current.style.width = "100px";
 		} else {
 			toggleNavigationRef.current.style.width = "0px";
-			toggleBtnRef.current.style.display = "block";
+			toggleBtnRef.current.style.display = "flex";
 		}
 	}, [toggleNav]);
 
@@ -39,14 +39,14 @@ export default function Navigation() {
 		(<button
 			className={styles.closeNavBtn}
 			onClick={handleToggleNav}>{closeNavIcon}</button>) 
-		: (<button>{closeNavIcon}</button>));
+		: (<button className={styles.closeNavBtn}>{closeNavIcon}</button>));
 
 	return (
 		<>
 			{openNav}
 			<div className={styles.navLayout} ref={toggleNavigationRef}>
-				{closeNav}
 				<ul className={styles.sectionList}>
+					{closeNav}
 					<li><a href="#projects">Projects</a></li>
 					<li><a href="#blogs">Blogs</a></li>
 					<li><a href="#about">About</a></li>
