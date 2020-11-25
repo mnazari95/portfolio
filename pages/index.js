@@ -96,7 +96,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FontAwesomeIcon icon={faExternalLinkAlt} size="2x"/> Github
+          <FontAwesomeIcon icon={faExternalLinkAlt}/> Github
         </a>
         <a
           href="https://ca.linkedin.com/in/hafiz-nazari-1b324a10a"
