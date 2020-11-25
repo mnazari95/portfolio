@@ -1,7 +1,7 @@
 import styles from '../styles/Navigation.module.css';
 import { useState, useRef, useEffect } from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faTimes } from '@fortawesome/free-solid-svg-icons';
+// import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+// import { faArrowLeft, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navigation() {
 
@@ -10,8 +10,10 @@ export default function Navigation() {
 	const toggleBtnRef = useRef();
 
 
-	const openNavIcon = <FontAwesomeIcon className={styles.iconStyle} icon={faArrowLeft} size="lg" />
-	const closeNavIcon = <FontAwesomeIcon icon={faTimes} className={styles.iconStyle} size="lg" />
+	// const openNavIcon = <FontAwesomeIcon className={styles.iconStyle} icon={faArrowLeft} size="5x" />
+	const openNavIcon = "menu";
+	// const closeNavIcon = <FontAwesomeIcon icon={faTimes} className={styles.iconStyle} size="2x" />
+	const closeNavIcon = "close";
 	
 	const handleToggleNav = () => {
 		setToggleNav(!toggleNav);
