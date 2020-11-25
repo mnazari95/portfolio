@@ -23,7 +23,8 @@ export default function Navigation() {
 			toggleNavigationRef.current.style.width = "100px";
 		} else {
 			toggleNavigationRef.current.style.width = "0px";
-			toggleBtnRef.current.style.width = "1.7rem";
+			toggleBtnRef.current.style.right = "6px";
+			toggleBtnRef.current.style.width = "26px";
 		}
 	}, [toggleNav]);
 
@@ -32,7 +33,7 @@ export default function Navigation() {
 			className={styles.toggleBtn}
 			onClick={handleToggleNav}
 			ref={toggleBtnRef}>{openNavIcon}</button>)
-		: (<button 
+		: (<button className={styles.toggleBtn}
 			ref={toggleBtnRef}></button>));
 
 	const closeNav =  (toggleNav && toggleNav ? 
