@@ -14,6 +14,7 @@ export default function Home() {
       <Head>
         <title>Mofiz.dev | Javascript Developer</title>
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
       </Head>
 
       <Header />
