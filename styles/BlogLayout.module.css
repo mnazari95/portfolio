@@ -1,0 +1,55 @@
+/* MOBILE VIEW DEFAULT*/
+.blogLayout {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10%;
+  min-height: 100vh;
+  height: auto;
+}
+
+.blogLayout article {
+  margin-bottom: 5px;
+}
+
+.blogHeader {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px #eaeaea;
+}
+
+.blogHeader h1 {
+  align-self: center;
+  font-size: 2.3rem;
+}
+
+.blogLayout aside li {
+  list-style-type: none;
+  margin: 5px 5px;
+}
+
+.blogLayout p a {
+  color: blue;
+}
+
+/* DESKTOP VIEW */
+@media (min-width: 600px) {
+
+	.blogLayout {
+    display: grid;
+    grid-template-columns: auto 20%;
+    grid-template-rows: auto;
+  }
+
+  .blogLayout article {
+    margin-right: 40px;
+  }
+
+  .blogLayout aside {
+    border-left: solid 1px #eaeaea;
+  }
+
+  .blogLayout aside li {
+    list-style-type: none;
+    margin: 5px 2px;
+  }
+}

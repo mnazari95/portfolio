@@ -81,4 +81,9 @@
 	.closeNavBtn:focus {
 			background: #efefee;
 	}
+	.toggleBtn:hover,
+	.toggleBtn:active,
+	.toggleBtn:focus {
+			background: #efefee;
+	}
 }

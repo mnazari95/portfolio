@@ -1,0 +1,236 @@
+import BlogPost from '../../../components/BlogPost';
+import Image from 'next/image';
+
+export const meta = {
+  title: 'Connecting Form With AWS Lambda',
+  description: "We'll be setting up a email notification through API Gateway, AWS Lambda, and AWS SES",
+  date: 'Nov 28, 2020',
+  readTime: 10
+}
+
+export default ({ children }) => <BlogPost meta={meta}>{children}</BlogPost>;
+
+## Introduction 
+
+This guide is seperated into 3 parts. First we'll be setting up our API Gateway through the AWS console, then we'll 
+continue to setup a lambda function, and finally setup an email for Amazon SES so our lambda function can forward the form content 
+to our email.
+
+## API Gateway Setup
+
+Lets start off by searching for API Gateway through the aws services. You'll be greeted by the main console page 
+and click on the "Create API" button.
+
+<Image src="/apigateway_create_page.PNG" width="400" height="400" layout="responsive" alt="click the 'Build' button for rest api (non-private)"/>
+
+Next page should be similar to the screenshot above. Now choose the REST API type and hit Build.
+
+<Image src="/apigateway_create_api.PNG" width="600" height="400" layout="responsive" alt="click the 'Create API' button"/>
+
+Shortly after you'll see the following page and for this example I named the API 'testAPI' but feel free to name the api related to 
+your use case.
+
+<Image src="/apigateway_create_resource.PNG" width="400" height="400" layout="responsive" alt="actions > create resource > create resource name" />
+
+Click on 'Actions' button and select 'create resource' option. Now create a resource name, I've named it 'contact' and finalize it by clicking 
+on 'create resource' button. Next step is to create a method for our newly created resource. Select the resource you created in the previous step 
+and click on 'Actions' and select 'create method' option, finally confirm it by clicking on the check mark. For this guide I've created a POST method 
+that we'll be sending a http request using fetch from our ReactJS frontend.
+
+<Image src="/apigateway_create_method.PNG" width="400" height="400" layout="responsive" alt="setup a CRUD method for your api endpoint" />
+
+If everything is done correctly, you should see the following page. It is important to select 'Mock' for now since we have not yet created 
+our Lambda function, now click 'Save' button and navigate back to 'Actions' button and this time we need to do two more steps and we'll be done 
+with setting up our API Gateway. 
+
+<Image src="/apigateway_CORS.PNG" width="400" height="400" layout="responsive" alt="enabling CORS for api gateway" />
+
+First lets enable CORS so our frontend http requests don't get denied through fetch. Open the actions menu and 
+select 'Enable CORS' and follow the options from the above image and confirm your options.
+
+<Image src="/apigateway_deploy.PNG" width="400" height="220" layout="responsive" alt="api deploy dialog" />
+
+Now for final step for setting up our Gateway is to go back to 'Actions' menu and select 'Deploy API' and give it a stage name and deploy. The following page 
+you'll be taken to \[name of stage\] stage editor, here you will simply leave the settings as default and confirm the changes and you're done.
+
+## AWS Lambda
+
+Before we start, navigate to AWS Lambda service from the aws website. Locate the 'Create function' button in 
+the top right corner and click it.
+
+<Image src="/lambda_create_fn.PNG" width="400" height="400" layout="responsive" alt="create function config" />
+
+We'll be using NodeJS runtime for this guide. Give a name for your lambda function and under permissions select 
+'Create a new role with basic lambda persmissions' then proceed with creating the function.
+
+<Image src="/lambda_create_policy.png" width="400" height="400" layout="responsive" alt="instructions to creating IAM policy" />
+
+Now that we have our lambda function created, we need to go ahead and create a policy to allow us access to SES service 
+from our lambda function. Head over to 'simple email service', on the left sidebar select 'policies' then 'Create policy' button. Next page 
+you have two ways of making a policy, we'll go with JSON method. Copy the JSON from below and paste it onto the JSON tab. Proceed with 
+creation, next page give your policy a name and click create policy, I named it 'EmailPolicy'.
+
+```javascript
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": "ses:SendEmail",
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+<Image src="/lambda_attach_policy.png" width="400" height="150" layout="responsive" alt="finding lambda function role" />
+
+Next we need attach our newly created policy to our lambda function's role. The easiest way to find the role name of 
+your lambda function is to head over to lambda services and under permissions tab the first section 'execution role' has 
+your role name. After clicking the role name it should open another tab and take you back to IAM services. Under permissions policies 
+click on 'attach policies' button and now search for the policy you created on the previous step and attach it to your lambda function role.
+
+```javascript
+var AWS = require('aws-sdk');
+var ses = new AWS.SES();
+ 
+var RECEIVER = 'your@email.com';
+var SENDER = 'your@email.com';
+
+var response = {
+ "isBase64Encoded": false,
+ "headers": { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*'},
+ "statusCode": 200,
+ "body": "{\"result\": \"Success.\"}"
+ };
+
+exports.handler = function (event, context) {
+    console.log('Received event:', event);
+    sendEmail(event, function (err, data) {
+        context.done(err, null);
+    });
+};
+ 
+function sendEmail (event, done) {
+    var params = {
+        Destination: {
+            ToAddresses: [
+                RECEIVER
+            ]
+        },
+        Message: {
+            Body: {
+                Text: {
+                    Data: 'name: ' + event.name + '\nemail: ' + event.email + '\ndesc: ' + event.desc,
+                    Charset: 'UTF-8'
+                }
+            },
+            Subject: {
+                Data: 'Contact Me Form: ' + event.name,
+                Charset: 'UTF-8'
+            }
+        },
+        Source: SENDER
+    };
+    ses.sendEmail(params, done);
+}
+```
+
+Copy and paste the code snippet from above onto your lambda's function code and replace the variables 'RECEIVER' & 'SENDER' to 
+one email that you would like to receive. Keep in mind that the content that is being passed onto our lambda function are named 
+'subject', 'email', and 'desc'. These can be changed to better match your use case. Once you're done with the function code make sure 
+to save it by clicking on 'deploy' button.
+
+## Simple Email Service
+
+<Image src="/ses_create_email.png" width="400" height="400" layout="responsive" alt="how to verify email for ses" />
+
+Head over to SES service and follow the instructions from the image above. Verify the email you would like your lambda function to 
+forward the content to. Once your email is verified you should see 'verified' un der verification status.
+
+## Final Touch Up
+
+We are almost done with this guide, all we need now is to connect our api gateway endpoint to our lambda function. Lets 
+head over to API Gateway services, select the api we made earlier and follow the instructions from images below.
+
+<Image src="/apigateway_connect_lambda.png" width="400" height="400" layout="responsive" alt="changing integration request" />
+
+<Image src="/apigateway_connect_lambda_2.png" width="400" height="400" layout="responsive" alt="changing integration request" />
+
+While you're at integration request page, make sure to select the lambda region that your lambda function is located at and search 
+the name below it once found hit save. Once we made this change we will need to re-enable CORS for our api and deploy(can be same stage) it. Feel free
+to go back in the guide if you've forgotten how to enable CORS or deploy api.
+
+Now what is left is we need to configure our frontend to send the correct parameters 
+through POST method to our api endpoint. I have created an simple CRA react app that has the following code, you 
+can also download the code from my [github](https://github.com/mnazari95/form-lambda-test) which might be easier and just change URL variable to your specific API Gateway 
+endpoint.
+
+```javascript
+import { useState } from 'react';
+import './App.css';
+
+function App() {
+
+  const [subject, setSubject] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const URL = 'YOUR API ENDPOINT';
+
+  const handleInput = (input) => {
+
+		switch (input.target.name) {
+			case "email":
+				setEmail(input.target.value);
+				break;
+			case "subject":
+				setSubject(input.target.value);
+				break;
+			case "message":
+				setMessage(input.target.value);
+				break;
+		}
+  }
+  
+  const handleRequest = (e) => {
+    e.preventDefault();
+
+    const data = {
+      subject,
+      email,
+      desc: message
+    };
+
+    const options = {
+      method: 'POST',
+      body: JSON.stringify(data)
+    };
+
+    fetch(URL, options)
+      .then(() => {
+        console.log('form was sent');
+      })
+      .catch(err => console.log(err));
+  }
+  return (
+    <div className="App">
+      <h2>Contact Form</h2>
+      <form>
+        <label htmlFor="subject">Subject</label>
+        <input type="text" name="subject" onChange={handleInput}/>
+        <label htmlFor="email">Email</label>
+        <input type="email" name="email" onChange={handleInput}/>
+        <label htmlFor="message">Message</label>
+        <textarea name="message" onChange={handleInput}/>
+        <input type="submit" onClick={handleRequest} />
+      </form>
+    </div>
+  );
+}
+
+export default App;
+```
+
+If you have managed to follow all of the steps correctly, you should be able to receive the data you enter 
+in the react app to appear in your email.
