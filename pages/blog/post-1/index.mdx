@@ -122,12 +122,12 @@ function sendEmail (event, done) {
         Message: {
             Body: {
                 Text: {
-                    Data: 'name: ' + event.name + '\nemail: ' + event.email + '\ndesc: ' + event.desc,
+                    Data: 'subject: ' + event.subject + '\nemail: ' + event.email + '\ndesc: ' + event.desc,
                     Charset: 'UTF-8'
                 }
             },
             Subject: {
-                Data: 'Contact Me Form: ' + event.name,
+                Data: 'Contact Me Form: ' + event.subject,
                 Charset: 'UTF-8'
             }
         },
