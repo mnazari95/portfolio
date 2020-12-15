@@ -27,8 +27,10 @@ export default function Home() {
         </h1>
         <div className={styles.centerContent}>
         <div className={styles.grid}>
-          <a href="https://mnazari95.github.io/pubapiapp/"  target="_blank" rel="noopener noreferrer" className={styles.card}>
-            <h3>NYT Article Searcher &rarr;</h3>
+          <div className={styles.card}>
+            <a href="https://mnazari95.github.io/pubapiapp/" target="_blank" rel="noopener noreferrer">
+              <h3>NYT Article Searcher &rarr;</h3>
+            </a>
             <p>ReactJS application in which integrates NYT public API by displaying most popular news.</p>
             <h4>Features:</h4>
             <ul>
@@ -38,10 +40,12 @@ export default function Home() {
               <li>Saving Articles</li>
               <li>Pagination</li>
             </ul>
-          </a>
+          </div>
 
-          <a href="https://canswap.net" target="_blank" rel="noopener noreferrer" className={styles.card}>
+          <div className={styles.card}>
+          <a href="https://canswap.net" target="_blank" rel="noopener noreferrer" >
             <h3>Canswap &rarr;</h3>
+            </a>
             <p>A Web App where users can trade their belongings</p>
             <h4>Technologies:</h4>
             <ul>
@@ -56,7 +60,7 @@ export default function Home() {
               <li>Nginx</li>
               <li>Bootstrap</li>
             </ul>
-          </a>
+          </div>
         </div>
         </div>
         </section>

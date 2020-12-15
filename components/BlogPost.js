@@ -19,7 +19,7 @@ export default function BlogPost({ children, meta}) {
         <h1>Mofiz.dev Blogs</h1>
       </header>
       <div className={bLayout.blogLayout}>
-        <article>
+        <article className={bLayout.content}>
           <HeadPost meta={meta} isBlogPost />
           {children}
         </article>
