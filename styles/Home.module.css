@@ -183,7 +183,7 @@
 
   .card {
     padding: 1.5rem;
-    max-height: 370px;
+    height: 370px;
     max-width: 300px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
@@ -209,7 +209,7 @@
     height: 1em;
   }
   .card p {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .title {
