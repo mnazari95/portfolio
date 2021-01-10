@@ -34,22 +34,36 @@
 /* DESKTOP VIEW */
 @media (min-width: 600px) {
 
+  .contentLayout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    height: auto;
+    justify-content: center;
+  }
+  .content {
+    padding: 0px 3%;
+  }
+
 	.blogLayout {
     display: grid;
-    grid-template-columns: auto 20%;
-    grid-template-rows: auto;
+    grid-template-columns: minmax(300px, auto) minmax(15%,30%);
+    grid-template-rows: auto auto;
+    margin: 0px 0px;
+    height: auto;
   }
 
   .blogLayout article {
-    margin-right: 40px;
+    grid-column: 1/2;
+    border-right: solid 1px #eaeaea;
   }
 
   .blogLayout aside {
-    border-left: solid 1px #eaeaea;
+    grid-column: 2/3;
   }
 
   .blogLayout aside li {
     list-style-type: none;
-    margin: 5px 2px;
+    margin: 2% 2%;
   }
 }

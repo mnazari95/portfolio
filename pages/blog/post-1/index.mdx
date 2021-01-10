@@ -122,12 +122,12 @@ function sendEmail (event, done) {
         Message: {
             Body: {
                 Text: {
-                    Data: 'name: ' + event.name + '\nemail: ' + event.email + '\ndesc: ' + event.desc,
+                    Data: 'subject: ' + event.subject + '\nemail: ' + event.email + '\ndesc: ' + event.desc,
                     Charset: 'UTF-8'
                 }
             },
             Subject: {
-                Data: 'Contact Me Form: ' + event.name,
+                Data: 'Contact Me Form: ' + event.subject,
                 Charset: 'UTF-8'
             }
         },
@@ -147,7 +147,7 @@ to save it by clicking on 'deploy' button.
 <Image src="/ses_create_email.png" width="400" height="400" layout="responsive" alt="how to verify email for ses" />
 
 Head over to SES service and follow the instructions from the image above. Verify the email you would like your lambda function to 
-forward the content to. Once your email is verified you should see 'verified' un der verification status.
+forward the content to. Once your email is verified you should see 'verified' under verification status.
 
 ## Final Touch Up
 

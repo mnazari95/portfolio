@@ -49,7 +49,7 @@ export default function ContactForm() {
 			<input type="text" id="subject" className={styles.formSubject} onChange={handleInput}/>
 			<label htmlFor="message" className={styles.formLabel}>Message</label>
 			<textarea id="message" className={styles.formMessage} onChange={handleInput}/>
-			<input type="submit" id="submitBtn" className={styles.formBtn}></input>
+			<input type="submit" id="submitBtn" className={styles.formBtn} value="Send"></input>
 		</form>
 	);
 }

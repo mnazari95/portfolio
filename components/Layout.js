@@ -1,4 +1,5 @@
 import Head from "next/head";
+import bLayout from '../styles/BlogLayout.module.css';
 
 export default function Layout({ children, pageTitle, description }) {
 
@@ -11,7 +12,7 @@ export default function Layout({ children, pageTitle, description }) {
         <title>{pageTitle}</title>
       </Head>
       <main>
-        <div className="content">{children}</div>
+        <div className={bLayout.contentLayout}>{children}</div>
       </main>
     </>
   );
