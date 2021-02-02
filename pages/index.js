@@ -16,7 +16,7 @@ export default function Home() {
           <title>Mofiz.dev | Javascript Developer</title>
           <link rel="icon" href="/favicon.ico" />
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-          <meta name="description" content="A personal website for Hafiz Nazari. Show casing what I'm up to in my Software development career." />
+          <meta name="description" content="A personal website for Mohammad Hafiz Nazari. Show casing what I'm up to in my Software development career." />
         </Head>
 
         <Header />
@@ -86,10 +86,10 @@ export default function Home() {
           </h1>
             <div className={styles.centerContent}>
               <p className={styles.paragraph}>I'm a full stack developer experienced with ReactJS for frontend and NodeJS + MySQL for backend.
-              Prior to web development I've had worked with client side C#, and Java(android development). I enjoy learning new ways of implementing my ideas, wether
-              its through new Technologies or tools. Currently I've been focusing more towards Javascript because of the amense amount of open source software that is available
+              Prior to web development I've had worked with client side C#, and Java(android development). I enjoy learning new ways of implementing my ideas, whether
+              its through new Technologies or tools. Currently I've been focusing more towards Javascript because of the immense amount of open source software that is available
               today. I'm comfortable working with variety of projects, anything from static website to full on dynamic web applications. The best way to reach me is either
-              through the contact form below or through linkedIn which can be accessed in the footer of this website.
+              through the contact form below or linkedIn which can be accessed in the footer of this website.
           </p>
             </div>
           </section>

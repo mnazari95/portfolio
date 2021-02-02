@@ -23,7 +23,7 @@ and click on the "Create API" button.
 
 <Image src="/apigateway_create_page.PNG" width="400" height="400" layout="responsive" alt="click the 'Build' button for rest api (non-private)"/>
 
-Next page should be similar to the screenshot above. Now choose the REST API type and hit Build.
+Next page should be similar to the screenshot above. Now choose the REST API type and click Build.
 
 <Image src="/apigateway_create_api.PNG" width="600" height="400" layout="responsive" alt="click the 'Create API' button"/>
 
@@ -151,15 +151,14 @@ forward the content to. Once your email is verified you should see 'verified' un
 
 ## Final Touch Up
 
-We are almost done with this guide, all we need now is to connect our api gateway endpoint to our lambda function. Lets 
-head over to API Gateway services, select the api we made earlier and follow the instructions from images below.
+We now need to connect our api gateway endpoint to our lambda function. Lets 
+head over to API Gateway services, select the api we made earlier and follow the instructions from the images below.
 
 <Image src="/apigateway_connect_lambda.png" width="400" height="400" layout="responsive" alt="changing integration request" />
 
 <Image src="/apigateway_connect_lambda_2.png" width="400" height="400" layout="responsive" alt="changing integration request" />
 
-While you're at integration request page, make sure to select the lambda region that your lambda function is located at and search 
-the name below it once found hit save. Once we made this change we will need to re-enable CORS for our api and deploy(can be same stage) it. Feel free
+While you're at integration request page, make sure to select the lambda region that your lambda function is located in and save. Once we made this change we will need to re-enable CORS for our api and deploy(can be same stage) it. Feel free
 to go back in the guide if you've forgotten how to enable CORS or deploy api.
 
 Now what is left is we need to configure our frontend to send the correct parameters 
