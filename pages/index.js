@@ -68,7 +68,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-          <section className={styles.section} className={styles.b} id="blogs">
+          {/* <section className={styles.section} className={styles.b} id="blogs">
             <h1 className={styles.title}>
               Blogs
           </h1>
@@ -79,13 +79,13 @@ export default function Home() {
                 ))}
               </div>
             </div>
-          </section>
-          <section className={styles.section} className={styles.a} id="about">
+          </section> */}
+          <section className={styles.section} className={styles.b} id="about">
             <h1 className={styles.title}>
               About
           </h1>
             <div className={styles.centerContent}>
-              <p className={styles.paragraph}>I'm a full stack developer experienced with ReactJS for frontend and NodeJS + MySQL for backend.
+              <p className={styles.paragraph}>I'm a software developer experienced with ReactJS for frontend and NodeJS + MySQL for backend.
               Prior to web development I've had worked with client side C#, and Java(android development). I enjoy learning new ways of implementing my ideas, whether
               its through new Technologies or tools. Currently I've been focusing more towards Javascript because of the immense amount of open source software that is available
               today. I'm comfortable working with variety of projects, anything from static website to full on dynamic web applications. The best way to reach me is either
@@ -93,7 +93,7 @@ export default function Home() {
           </p>
             </div>
           </section>
-          <section className={styles.section} className={styles.b} id="contact">
+          <section className={styles.section} className={styles.a} id="contact">
             <h1 className={styles.title}>
               Contact Me
           </h1>
