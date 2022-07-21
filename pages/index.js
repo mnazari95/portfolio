@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation.js';
 import Header from '../components/Header.js';
 import { Post } from "../components/Post";
 import { posts } from "../getAllPosts";
+import Card from '../components/Card';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -16,55 +17,41 @@ export default function Home() {
         <title>Mofiz.dev | Javascript Developer</title>
         <link rel="icon" href="/favicon.ico" />
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
-        <meta name="description" content="A personal website for Hafiz Nazari. Show casing what I'm up to in my Software development career." />
+        <meta name="description" content="A personal website for Mohammad Hafiz Nazari. Show casing what I'm up to in my Software development career." />
       </Head>
 
       <Header />
       <main className={styles.main}>
-        <section className={styles.section} className={styles.a} id="projects">
+        <section className={[styles.section, styles.a].join(" ")} id="projects">
         <h1 className={styles.title}>
           Projects
         </h1>
         <div className={styles.centerContent}>
         <div className={styles.grid}>
-          <div className={styles.card}>
-            <a href="https://mnazari95.github.io/pubapiapp/" target="_blank" rel="noopener noreferrer">
-              <h3>NYT Article Searcher &rarr;</h3>
-            </a>
-            <p>ReactJS application in which integrates NYT public API by displaying most popular news.</p>
-            <h4>Features:</h4>
-            <ul>
-              <li>Trending News</li>
-              <li>Article Searches</li>
-              <li>Search Filtering</li>
-              <li>Saving Articles</li>
-              <li>Pagination</li>
-            </ul>
-          </div>
+          <Card link={"https://apps.apple.com/app/fuel-cost-manager-for-cars/id1631714485"}
+                title={"Fuel Cost Manager - IOS"}
+                description={"First IOS app, built while learning swift"}
+                features={["Swift", "SwiftUI", "CoreData", "Charts", "IOS Native", "Ads"]} />
 
-          <div className={styles.card}>
-          <a href="https://canswap.net" target="_blank" rel="noopener noreferrer" >
-            <h3>Canswap &rarr;</h3>
-            </a>
-            <p>A Web App where users can trade their belongings</p>
-            <h4>Technologies:</h4>
-            <ul>
-              <li>ReactJS</li>
-              <li>ExpressJS</li>
-              <li>MySQL</li>
-              <li>NodeJS</li>
-              <li>Redis</li>
-              <li>PuppeteerJS</li>
-              <li>AWS S3</li>
-              <li>AWS Lambda</li>
-              <li>Nginx</li>
-              <li>Bootstrap</li>
-            </ul>
-          </div>
+          <Card link={"https://play.google.com/store/apps/details?id=com.itsdotstudios.gastracker"}
+                title={"Fuel Cost Manager - Android"}
+                description={"Utilizes modern android development technologies along with MVVM architecture, implementaed ads alongside in-app-purchases"}
+                features={["Kotlin", "Jetpack Compose", "Room", "MVVM", "Android Native", "In App Purchases", "Ads"]} />
+
+          <Card link={"https://mnazari95.github.io/pubapiapp/"} 
+                title={"NYT Article Searcher"} 
+                description={"ReactJS application in which integrates NYT public API by displaying most popular news."}
+                features={["Trending News", "Article Searches", "Search Filtering", "Saving Articles", "Pagination"]} />
+
+          <Card link={"#"}
+                title={"Canswap"}
+                description={"A FullStack Web App where I used ReactJS for frontend and ExpressJS Along with MySQL for backend."}
+                features={["ReactJS", "ExpressJS", "MySQL", "NodeJS", "Redis", "PuppeteerJS", "AWS S3", "AWS Lambda", "Nginx", "Bootstrap"]} />
+ 
         </div>
         </div>
         </section>
-        <section className={styles.section} className={styles.b} id="blogs">
+        {/* <section className={[styles.section, styles.b].join(" ")} id="blogs">
           <h1 className={styles.title}>
             Blogs
           </h1>
@@ -75,21 +62,21 @@ export default function Home() {
             ))}
           </div>
           </div>
-        </section>
-        <section className={styles.section} className={styles.a} id="about">
+        </section> */}
+        <section className={[styles.section, styles.b].join(" ")} id="about">
           <h1 className={styles.title}>
             About
           </h1>
           <div className={styles.centerContent}>
-          <p className={styles.paragraph}>I'm a full stack developer experienced with ReactJS for frontend and NodeJS + MySQL for backend. 
-          Prior to web development I've had worked with client side C#, and Java(android development). I enjoy learning new ways of implementing my ideas, wether 
-          its through new Technologies or tools. Currently I've been focusing more towards Javascript because of the amense amount of open source software that is available
-          today. I'm comfortable working with variety of projects, anything from static website to full on dynamic web applications. The best way to reach me is either 
-          through the contact form below or through linkedIn which can be accessed in the footer of this website.
+          <p className={styles.paragraph}>I'm a software developer currently located western Canada. I have worked with variety of technologies in the past such as 
+          ReactJS, NodeJS, MySQL, Kotlin, Java, Swift. I'm capable of working with frontend technologies or backend. I enjoy learning new ways of implementing my ideas, wether 
+          its through new Technologies or tools. Currently I've been focusing more towards Mobile development and I'm open for new opertunities towards mobile development where I can contribute, learn, and improve. 
+          I'm comfortable working with variety of projects, anything from static website to full on dynamic web/mobile applications. The best way to reach me is either 
+          through the contact form below or through linkedIn.
           </p>
           </div>
         </section>
-        <section className={styles.section} className={styles.b} id="contact">
+        <section className={[styles.section, styles.a].join(" ")} id="contact">
           <h1 className={styles.title}>
             Contact Me
           </h1>
