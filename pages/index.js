@@ -69,9 +69,9 @@ export default function Home() {
           </h1>
           <div className={styles.centerContent}>
           <p className={styles.paragraph}>I'm a software developer currently located western Canada. I have worked with variety of technologies in the past such as 
-          ReactJS, NodeJS, MySQL, Kotlin, Java, Swift. I'm capable of working with frontend technologies or backend. I enjoy learning new ways of implementing my ideas, wether 
-          its through new Technologies or tools. Currently I've been focusing more towards Mobile development and I'm open for new opertunities towards mobile development where I can contribute, learn, and improve. 
-          I'm comfortable working with variety of projects, anything from static website to full on dynamic web/mobile applications. The best way to reach me is either 
+          ReactJS, NodeJS, MySQL, Kotlin, Java, Swift. I'm capable of working with frontend technologies or backend. I enjoy learning new ways of solving problems and implementing ideas 
+          through new Technologies or tools. Currently I've been focusing more towards Mobile development. I'm open for new opertunities and challenges in where I can contribute, learn, and improve. 
+          I'm comfortable working with variety of technologies, anything from a cms website to full on dynamic web/mobile applications. The best way to reach me is either 
           through the contact form below or through linkedIn.
           </p>
           </div>
