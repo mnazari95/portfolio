@@ -30,8 +30,8 @@ export default function Home() {
         <div className={styles.grid}>
           <Card link={"https://apps.apple.com/app/fuel-cost-manager-for-cars/id1631714485"}
                 title={"Fuel Cost Manager - IOS"}
-                description={"First IOS app, built while learning swift"}
-                features={["Swift", "SwiftUI", "CoreData", "Charts", "IOS Native", "Ads"]} />
+                description={"First IOS app, built while learning swift. Integrated third party library charts through swift package manager"}
+                features={["Swift", "SwiftUI", "CoreData", "Charts", "IOS Native", "StoreKit","Ads"]} />
 
           <Card link={"https://play.google.com/store/apps/details?id=com.itsdotstudios.gastracker"}
                 title={"Fuel Cost Manager - Android"}
@@ -43,7 +43,7 @@ export default function Home() {
                 description={"ReactJS application in which integrates NYT public API by displaying most popular news."}
                 features={["Trending News", "Article Searches", "Search Filtering", "Saving Articles", "Pagination"]} />
 
-          <Card link={"#"}
+          <Card link={"https://www.youtube.com/watch?v=zDKQxhKNUjk"}
                 title={"Canswap"}
                 description={"A FullStack Web App where I used ReactJS for frontend and ExpressJS Along with MySQL for backend."}
                 features={["ReactJS", "ExpressJS", "MySQL", "NodeJS", "Redis", "PuppeteerJS", "AWS S3", "AWS Lambda", "Nginx", "Bootstrap"]} />
