@@ -34,7 +34,7 @@ export default function Header() {
 				</a>
 				<span> | </span>
 				<a
-					href="https://ca.linkedin.com/in/hafiz-nazari-1b324a10a"
+					href="https://ca.linkedin.com/in/mo-nazari-1b324a10a"
 					target="_blank"
 					rel="noopener noreferrer"
 				>
