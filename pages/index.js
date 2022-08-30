@@ -12,46 +12,51 @@ export default function Home() {
 
   return (
     <>
-    <div className={styles.container}>
-      <Head>
-        <title>Mofiz.dev | Javascript Developer</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
-        <meta name="description" content="A personal website for Mohammad Hafiz Nazari. Show casing what I'm up to in my Software development career." />
-      </Head>
+      <div className={styles.container}>
+        <Head>
+          <title>Mofiz.dev | Javascript Developer</title>
+          <link rel="icon" href="/favicon.ico" />
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+          <meta name="description" content="A personal website for Mohammad Hafiz Nazari. Show casing what I'm up to in my Software development career." />
+        </Head>
 
-      <Header />
-      <main className={styles.main}>
-        <section className={[styles.section, styles.a].join(" ")} id="projects">
-        <h1 className={styles.title}>
-          Projects
-        </h1>
-        <div className={styles.centerContent}>
-        <div className={styles.grid}>
-          <Card link={"https://apps.apple.com/app/fuel-cost-manager-for-cars/id1631714485"}
-                title={"Fuel Cost Manager - IOS"}
-                description={"First IOS app, built while learning swift. Integrated third party library charts through swift package manager"}
-                features={["Swift", "SwiftUI", "CoreData", "Charts", "IOS Native", "StoreKit","Ads"]} />
+        <Header />
+        <main className={styles.main}>
+          <section className={[styles.section, styles.a].join(" ")} id="projects">
+            <h1 className={styles.title}>
+              Projects
+            </h1>
+            <div className={styles.centerContent}>
+              <div className={styles.grid}>
+                <Card link={"https://apps.apple.com/app/quick-mental-math/id1642089974"}
+                  title={"Quick Mental Math - IOS"}
+                  description={"Built using swift with swiftUI. Integrated ads using swift package manager, CoreData"}
+                  features={["Swift", "SwiftUI", "CoreData", "IOS Native", "Ads"]} />
+                  
+                <Card link={"https://apps.apple.com/app/fuel-cost-manager-for-cars/id1631714485"}
+                  title={"Fuel Cost Manager - IOS"}
+                  description={"First IOS app, built while learning swift. Integrated third party library charts through swift package manager"}
+                  features={["Swift", "SwiftUI", "CoreData", "Charts", "IOS Native", "StoreKit", "Ads"]} />
 
-          <Card link={"https://play.google.com/store/apps/details?id=com.itsdotstudios.gastracker"}
-                title={"Fuel Cost Manager - Android"}
-                description={"Utilizes modern android development technologies along with MVVM architecture, implementaed ads alongside in-app-purchases"}
-                features={["Kotlin", "Jetpack Compose", "Room", "MVVM", "Android Native", "In App Purchases", "Ads"]} />
+                <Card link={"https://play.google.com/store/apps/details?id=com.itsdotstudios.gastracker"}
+                  title={"Fuel Cost Manager - Android"}
+                  description={"Utilizes modern android development technologies along with MVVM architecture, implementaed ads alongside in-app-purchases"}
+                  features={["Kotlin", "Jetpack Compose", "Room", "MVVM", "Android Native", "In App Purchases", "Ads"]} />
 
-          <Card link={"https://mnazari95.github.io/pubapiapp/"} 
-                title={"NYT Article Searcher"} 
-                description={"ReactJS application in which integrates NYT public API by displaying most popular news."}
-                features={["Trending News", "Article Searches", "Search Filtering", "Saving Articles", "Pagination"]} />
+                <Card link={"https://mnazari95.github.io/pubapiapp/"}
+                  title={"NYT Article Searcher"}
+                  description={"ReactJS application in which integrates NYT public API by displaying most popular news."}
+                  features={["Trending News", "Article Searches", "Search Filtering", "Saving Articles", "Pagination"]} />
 
-          <Card link={"https://www.youtube.com/watch?v=zDKQxhKNUjk"}
-                title={"Canswap"}
-                description={"A FullStack Web App where I used ReactJS for frontend and ExpressJS Along with MySQL for backend."}
-                features={["ReactJS", "ExpressJS", "MySQL", "NodeJS", "Redis", "PuppeteerJS", "AWS S3", "AWS Lambda", "Nginx", "Bootstrap"]} />
- 
-        </div>
-        </div>
-        </section>
-        {/* <section className={[styles.section, styles.b].join(" ")} id="blogs">
+                <Card link={"https://www.youtube.com/watch?v=zDKQxhKNUjk"}
+                  title={"Canswap"}
+                  description={"A FullStack Web App where I used ReactJS for frontend and ExpressJS Along with MySQL for backend."}
+                  features={["ReactJS", "ExpressJS", "MySQL", "NodeJS", "Redis", "PuppeteerJS", "AWS S3", "AWS Lambda", "Nginx", "Bootstrap"]} />
+
+              </div>
+            </div>
+          </section>
+          {/* <section className={[styles.section, styles.b].join(" ")} id="blogs">
           <h1 className={styles.title}>
             Blogs
           </h1>
@@ -63,29 +68,29 @@ export default function Home() {
           </div>
           </div>
         </section> */}
-        <section className={[styles.section, styles.b].join(" ")} id="about">
-          <h1 className={styles.title}>
-            About
-          </h1>
-          <div className={styles.centerContent}>
-          <p className={styles.paragraph}>I'm a software developer currently located western Canada. I have worked with variety of technologies in the past such as 
-          ReactJS, NodeJS, MySQL, Kotlin, Java, Swift. I'm capable of working with frontend technologies or backend. I enjoy learning new ways of solving problems and implementing ideas 
-          through new Technologies or tools. Currently I've been focusing more towards Mobile development. I'm open for new opertunities and challenges in where I can contribute, learn, and improve. 
-          I'm comfortable working with variety of technologies, anything from a cms website to full on dynamic web/mobile applications. The best way to reach me is either 
-          through the contact form below or through linkedIn.
-          </p>
-          </div>
-        </section>
-        <section className={[styles.section, styles.a].join(" ")} id="contact">
-          <h1 className={styles.title}>
-            Contact Me
-          </h1>
-          <ContactForm />
-        </section>
-      </main>
-      <Footer />
-    </div>
-    <Navigation />
+          <section className={[styles.section, styles.b].join(" ")} id="about">
+            <h1 className={styles.title}>
+              About
+            </h1>
+            <div className={styles.centerContent}>
+              <p className={styles.paragraph}>I'm a software developer currently located western Canada. I have worked with variety of technologies in the past such as
+                ReactJS, NodeJS, MySQL, Kotlin, Java, Swift. I'm capable of working with frontend technologies or backend. I enjoy learning new ways of solving problems and implementing ideas
+                through new Technologies or tools. Currently I've been focusing more towards Mobile development. I'm open for new opertunities and challenges in where I can contribute, learn, and improve.
+                I'm comfortable working with variety of technologies, anything from a cms website to full on dynamic web/mobile applications. The best way to reach me is either
+                through the contact form below or through linkedIn.
+              </p>
+            </div>
+          </section>
+          <section className={[styles.section, styles.a].join(" ")} id="contact">
+            <h1 className={styles.title}>
+              Contact Me
+            </h1>
+            <ContactForm />
+          </section>
+        </main>
+        <Footer />
+      </div>
+      <Navigation />
     </>
   )
 }
