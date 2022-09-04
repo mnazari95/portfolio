@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation.js';
 import Header from '../components/Header.js';
 import { Post } from "../components/Post";
 import { posts } from "../getAllPosts";
+import Card from '../components/Card';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -21,82 +22,69 @@ export default function Home() {
 
         <Header />
         <main className={styles.main}>
-          <section className={styles.section} className={styles.a} id="projects">
+          <section className={[styles.section, styles.a].join(" ")} id="projects">
             <h1 className={styles.title}>
               Projects
-        </h1>
+            </h1>
             <div className={styles.centerContent}>
               <div className={styles.grid}>
-                <a href="https://canswap.net" target="_blank" rel="noopener noreferrer" className={styles.card}>
-                  <h3>Canswap &rarr;</h3>
-                  <p>A full stack project where I made use of MERN stack. Users are able to upload images of what they want to sell or trade, make an offer of item or money, message others trade their belongings</p>
-                  <h4>Features:</h4>
-                  <ul>
-                    <li>Create/edit/delete posts</li>
-                    <li>Search functionality</li>
-                    <li>Data-mine craiglist postings</li>
-                    <li>Message other users</li>
-                    <li>Make offers with money or items</li>
-                    <li>Accept/reject offers</li>
-                  </ul>
-                  <h4>Technologies:</h4>
-                  <ul>
-                    <li>ReactJS</li>
-                    <li>ExpressJS</li>
-                    <li>MySQL</li>
-                    <li>NodeJS</li>
-                    <li>Redis</li>
-                    <li>PuppeteerJS</li>
-                    <li>AWS S3</li>
-                    <li>AWS Lambda</li>
-                    <li>Nginx</li>
-                    <li>Bootstrap</li>
-                  </ul>
-                </a>
-                <a href="https://mnazari95.github.io/pubapiapp/" target="_blank" rel="noopener noreferrer" className={styles.card}>
-                  <h3>NYT Article Searcher &rarr;</h3>
-                  <p>ReactJS application in which integrates NYT public API by displaying most popular news.</p>
-                  <h4>Features:</h4>
-                  <ul>
-                    <li>Trending News</li>
-                    <li>Article Searches</li>
-                    <li>Search Filtering</li>
-                    <li>Saving Articles</li>
-                    <li>Pagination</li>
-                  </ul>
-                </a>
+                <Card link={"https://apps.apple.com/app/quick-mental-math/id1642089974"}
+                  title={"Quick Mental Math - IOS"}
+                  description={"Built using swift with swiftUI. Integrated ads using swift package manager, CoreData"}
+                  features={["Swift", "SwiftUI", "CoreData", "IOS Native", "Ads"]} />
+                  
+                <Card link={"https://apps.apple.com/app/fuel-cost-manager-for-cars/id1631714485"}
+                  title={"Fuel Cost Manager - IOS"}
+                  description={"First IOS app, built while learning swift. Integrated third party library charts through swift package manager"}
+                  features={["Swift", "SwiftUI", "CoreData", "Charts", "IOS Native", "StoreKit", "Ads"]} />
+
+                <Card link={"https://play.google.com/store/apps/details?id=com.itsdotstudios.gastracker"}
+                  title={"Fuel Cost Manager - Android"}
+                  description={"Utilizes modern android development technologies along with MVVM architecture, implementaed ads alongside in-app-purchases"}
+                  features={["Kotlin", "Jetpack Compose", "Room", "MVVM", "Android Native", "In App Purchases", "Ads"]} />
+
+                <Card link={"https://mnazari95.github.io/pubapiapp/"}
+                  title={"NYT Article Searcher"}
+                  description={"ReactJS application in which integrates NYT public API by displaying most popular news."}
+                  features={["Trending News", "Article Searches", "Search Filtering", "Saving Articles", "Pagination"]} />
+
+                <Card link={"https://www.youtube.com/watch?v=zDKQxhKNUjk"}
+                  title={"Canswap"}
+                  description={"A FullStack Web App where I used ReactJS for frontend and ExpressJS Along with MySQL for backend."}
+                  features={["ReactJS", "ExpressJS", "MySQL", "NodeJS", "Redis", "PuppeteerJS", "AWS S3", "AWS Lambda", "Nginx", "Bootstrap"]} />
+
               </div>
             </div>
           </section>
-          {/* <section className={styles.section} className={styles.b} id="blogs">
-            <h1 className={styles.title}>
-              Blogs
+          {/* <section className={[styles.section, styles.b].join(" ")} id="blogs">
+          <h1 className={styles.title}>
+            Blogs
           </h1>
-            <div className={styles.centerContent}>
-              <div className={styles.grid}>
-                {posts.map((post) => (
-                  <Post key={post.link} post={post} />
-                ))}
-              </div>
-            </div>
-          </section> */}
-          <section className={styles.section} className={styles.b} id="about">
+          <div className={styles.centerContent}>
+          <div className={styles.grid}>
+            {posts.map((post) => (
+              <Post key={post.link} post={post} />
+            ))}
+          </div>
+          </div>
+        </section> */}
+          <section className={[styles.section, styles.b].join(" ")} id="about">
             <h1 className={styles.title}>
               About
-          </h1>
+            </h1>
             <div className={styles.centerContent}>
-              <p className={styles.paragraph}>I'm a software developer experienced with ReactJS for frontend and NodeJS + MySQL for backend.
-              Prior to web development I've had worked with client side C#, and Java(android development). I enjoy learning new ways of implementing my ideas, whether
-              its through new Technologies or tools. Currently I've been focusing more towards Javascript because of the immense amount of open source software that is available
-              today. I'm comfortable working with variety of projects, anything from static website to full on dynamic web applications. The best way to reach me is either
-              through the contact form below or linkedIn which can be accessed in the footer of this website.
-          </p>
+              <p className={styles.paragraph}>I'm a software developer currently located western Canada. I have worked with variety of technologies in the past such as
+                ReactJS, NodeJS, MySQL, Kotlin, Java, Swift. I'm capable of working with frontend technologies or backend. I enjoy learning new ways of solving problems and implementing ideas
+                through new Technologies or tools. Currently I've been focusing more towards Mobile development. I'm open for new opertunities and challenges in where I can contribute, learn, and improve.
+                I'm comfortable working with variety of technologies, anything from a cms website to full on dynamic web/mobile applications. The best way to reach me is either
+                through the contact form below or through linkedIn.
+              </p>
             </div>
           </section>
-          <section className={styles.section} className={styles.a} id="contact">
+          <section className={[styles.section, styles.a].join(" ")} id="contact">
             <h1 className={styles.title}>
               Contact Me
-          </h1>
+            </h1>
             <ContactForm />
           </section>
         </main>

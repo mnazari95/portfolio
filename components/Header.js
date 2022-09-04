@@ -23,7 +23,24 @@ export default function Header() {
 		<header className={styles.header}>
 			<div>
 				<h1 ref={nameRef} onClick={handleNameChange}>{ALIAS}</h1>
-				<h4>Full Stack Javascript Developer</h4>
+				<h4>Software Developer</h4>
+				<h4>
+				<a
+					href="https://github.com/mnazari95"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Github
+				</a>
+				<span> | </span>
+				<a
+					href="https://ca.linkedin.com/in/mo-nazari-1b324a10a"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					LinkedIn
+				</a>
+				</h4>
 			</div>
 		</header>
 	)
