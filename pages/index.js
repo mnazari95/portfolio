@@ -34,9 +34,9 @@ export default function Home() {
                   features={["Swift", "SwiftUI", "CoreData", "IOS Native", "Ads"]} />
                   
                 <Card link={"https://apps.apple.com/app/fuel-cost-manager-for-cars/id1631714485"}
-                  title={"Fuel Cost Manager - IOS"}
+                  title={"Mileage Tracker for Drivers - IOS"}
                   description={"First IOS app, built while learning swift. Integrated third party library charts through swift package manager"}
-                  features={["Swift", "SwiftUI", "CoreData", "Charts", "IOS Native", "StoreKit", "Ads"]} />
+                  features={["Swift", "SwiftUI","Core Location", "MapKit", "CoreData", "Charts", "IOS Native", "StoreKit", "Ads"]} />
 
                 <Card link={"https://play.google.com/store/apps/details?id=com.itsdotstudios.gastracker"}
                   title={"Fuel Cost Manager - Android"}
