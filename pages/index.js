@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <div className={styles.container}>
         <Head>
-          <title>Mofiz.dev | Javascript Developer</title>
+          <title>Mofiz.dev | Software Developer</title>
           <link rel="icon" href="/favicon.ico" />
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
           <meta name="description" content="A personal website for Mohammad Hafiz Nazari. Show casing what I'm up to in my Software development career." />
@@ -31,7 +31,7 @@ export default function Home() {
                 <Card link={"https://apps.apple.com/app/quick-mental-math/id1642089974"}
                   title={"Quick Mental Math - IOS"}
                   description={"Built using swift with swiftUI. Integrated ads using swift package manager, CoreData"}
-                  features={["Swift", "SwiftUI", "CoreData", "IOS Native", "Ads"]} />
+                  features={["Push Notification","Firebase remote notification","Swift", "SwiftUI", "CoreData", "IOS Native", "Ads"]} />
                   
                 <Card link={"https://apps.apple.com/app/fuel-cost-manager-for-cars/id1631714485"}
                   title={"Mileage Tracker for Drivers - IOS"}
