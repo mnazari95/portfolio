@@ -19,7 +19,6 @@ export default function Home() {
           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
           <meta name="description" content="A personal website for Mohammad Hafiz Nazari. Show casing what I'm up to in my Software development career." />
         </Head>
-
         <Header />
         <main className={styles.main}>
           <section className={[styles.section, styles.a].join(" ")} id="projects">
@@ -38,20 +37,22 @@ export default function Home() {
                   description={"First IOS app, built while learning swift. Integrated third party library charts through swift package manager, utilizes mapkit along side corelocation for background location tracking."}
                   features={["Swift", "SwiftUI","Core Location", "MapKit", "CoreData", "Charts", "IOS Native", "StoreKit", "Ads"]} />
 
-                <Card link={"https://play.google.com/store/apps/details?id=com.itsdotstudios.gastracker"}
+                {/* <Card link={"https://play.google.com/store/apps/details?id=com.itsdotstudios.gastracker"}
                   title={"Fuel Cost Manager - Android"}
                   description={"Utilizes modern android development technologies along with MVVM architecture, implementaed ads alongside in-app-purchases"}
-                  features={["Kotlin", "Jetpack Compose", "Room", "MVVM", "Android Native", "In App Purchases", "Ads"]} />
+                  features={["Kotlin", "Jetpack Compose", "Room", "MVVM", "Android Native", "In App Purchases", "Ads"]} /> */}
+
+                <Card link={"https://www.youtube.com/watch?v=zDKQxhKNUjk"}
+                  title={"Canswap"}
+                  description={"A FullStack Web App where I used ReactJS for frontend and ExpressJS Along with MySQL for backend."}
+                  features={["ReactJS", "ExpressJS", "MySQL", "NodeJS", "Redis", "PuppeteerJS", "AWS S3", "AWS Lambda", "Nginx", "Bootstrap"]} />
 
                 <Card link={"https://mnazari95.github.io/pubapiapp/"}
                   title={"NYT Article Searcher"}
                   description={"ReactJS application in which integrates NYT public API by displaying most popular news."}
                   features={["Trending News", "Article Searches", "Search Filtering", "Saving Articles", "Pagination"]} />
 
-                <Card link={"https://www.youtube.com/watch?v=zDKQxhKNUjk"}
-                  title={"Canswap"}
-                  description={"A FullStack Web App where I used ReactJS for frontend and ExpressJS Along with MySQL for backend."}
-                  features={["ReactJS", "ExpressJS", "MySQL", "NodeJS", "Redis", "PuppeteerJS", "AWS S3", "AWS Lambda", "Nginx", "Bootstrap"]} />
+                
 
               </div>
             </div>
