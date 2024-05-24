@@ -29,6 +29,7 @@ export default function Header() {
 					href="https://github.com/mnazari95"
 					target="_blank"
 					rel="noopener noreferrer"
+					id='gHubLink'
 				>
 					Github
 				</a>
@@ -37,6 +38,7 @@ export default function Header() {
 					href="https://ca.linkedin.com/in/mo-nazari-1b324a10a"
 					target="_blank"
 					rel="noopener noreferrer"
+					id='linkedInLink'
 				>
 					LinkedIn
 				</a>
