@@ -44,7 +44,7 @@
     margin: 0px;
     margin-top: 0.5rem;
   }
-  .header h1::before {
+  /* .header h1::before {
 		content: '';
 		position: absolute;
 		display: flex;
@@ -54,8 +54,8 @@
 		right: -20px;
 		height: 100%;
 		z-index: -1;
-	}
-	.header h1::after {
+	} */
+	/* .header h1::after {
 		content: '';
 		position: absolute;
 		display: flex;
@@ -69,7 +69,7 @@
 		z-index: -2;
 		padding: 0%;
 		margin: 0%;
-	}
+	} */
 
 	.header h4 a:hover {
 		border: 2px solid grey;

@@ -27,15 +27,15 @@ export default function Home() {
             </h1>
             <div className={styles.centerContent}>
               <div className={styles.grid}>
-                <Card link={"https://apps.apple.com/app/quick-mental-math/id1642089974"}
-                  title={"Quick Mental Math - IOS"}
-                  description={"Built using swift with swiftUI. Integrated ads using swift package manager, CoreData"}
-                  features={["Push Notification","Firebase remote notification","Swift", "SwiftUI", "CoreData", "IOS Native", "Ads"]} />
-                  
-                <Card link={"https://apps.apple.com/app/fuel-cost-manager-for-cars/id1631714485"}
-                  title={"Bola Mileage Tracker - IOS"}
+              <Card link={"https://apps.apple.com/app/fuel-cost-manager-for-cars/id1631714485"}
+                  title={"Bola Mileage Tracker - IOS App"}
                   description={"First IOS app, built while learning swift. Integrated third party library charts through swift package manager, utilizes mapkit along side corelocation for background location tracking."}
                   features={["Swift", "SwiftUI","Core Location", "MapKit", "CoreData", "Charts", "IOS Native", "StoreKit", "Ads"]} />
+
+                <Card link={"https://apps.apple.com/app/quick-mental-math/id1642089974"}
+                  title={"Quick Mental Math - IOS App"}
+                  description={"Built using swift with swiftUI. Integrated ads using swift package manager, CoreData"}
+                  features={["Push Notification","Firebase remote notification","Swift", "SwiftUI", "CoreData", "IOS Native", "Ads"]} />
 
                 {/* <Card link={"https://play.google.com/store/apps/details?id=com.itsdotstudios.gastracker"}
                   title={"Fuel Cost Manager - Android"}
@@ -43,12 +43,12 @@ export default function Home() {
                   features={["Kotlin", "Jetpack Compose", "Room", "MVVM", "Android Native", "In App Purchases", "Ads"]} /> */}
 
                 <Card link={"https://www.youtube.com/watch?v=zDKQxhKNUjk"}
-                  title={"Canswap"}
+                  title={"Canswap - Web App"}
                   description={"A FullStack Web App where I used ReactJS for frontend and ExpressJS Along with MySQL for backend."}
                   features={["ReactJS", "ExpressJS", "MySQL", "NodeJS", "Redis", "PuppeteerJS", "AWS S3", "AWS Lambda", "Nginx", "Bootstrap"]} />
 
                 <Card link={"https://mnazari95.github.io/pubapiapp/"}
-                  title={"NYT Article Searcher"}
+                  title={"NYT Article Searcher - Web App"}
                   description={"ReactJS application in which integrates NYT public API by displaying most popular news."}
                   features={["Trending News", "Article Searches", "Search Filtering", "Saving Articles", "Pagination"]} />
 
